@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite - Gamil" verbose="1" >
+   <!-- <listeners>
+        <listener class-name="utils.listeners.ListenerTestNG"/>
+    </listeners>-->
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://mail.google.com/"/>
+    <test name="Lamansys Test - Gmail">
+        <parameter name="email" value="test.lamansys.bf@gmail.com"/>
+        <parameter name="password" value="!Password123"/>
+        <parameter name="wrongEmail" value="test.lamansys.bf@tests.com"/>
+        <parameter name="wrongPassword" value="Password1234"/>
+        <parameter name="loginErrorMessage1" value="No pudimos encontrar tu Cuenta de Google"/>
+        <parameter name="loginErrorMessageWrongEmail" value="Couldn’t find your Google Account"/>
+        <parameter name="loginErrorMessageWrongPassword" value="Wrong password. Try again or click Forgot password to reset it."/>
+
+         <classes>
+            <class name="tests.gmail.GmailTest" />
+        </classes>
+    </test>
+
+</suite>
